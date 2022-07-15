@@ -4,6 +4,9 @@
 
 const producto = function (array) {
   //escribe aqui tu codigo
+  var num = array.pop();
+    if (!array.length) return num;
+    return num * producto(array)
 };
 
 
@@ -25,6 +28,7 @@ const producto = function (array) {
 
 
 const isThere = function (obj, value){
+
 
 };
 
