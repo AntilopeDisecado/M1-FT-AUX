@@ -28,8 +28,18 @@ const producto = function (array) {
 
 
 const isThere = function (obj, value){
+  for (let key in obj) {
+    if (obj[key] === value) {
+      return true;
+    }
 
+    if (typeof (obj[key]) === 'object'){
+      return isThere(obj[key], value)
+    }
 
+    //else {return false}
+  }
+  return false
 };
 
 // console.log(isThere(obj, "Albus"))
